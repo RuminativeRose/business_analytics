@@ -1,0 +1,8 @@
+openai>=1.82.1
+pydantic>=2.11.5
+faiss-cpu>=1.11.0
+langsmith>=0.3.43
+numpy>=2.2.6
+pinecone>=7.0.2
+urllib3>=2.4.0
+

@@ -1,0 +1,153 @@
+##################################################
+### Rose's .gitignore file for Java and Python ###
+##################################################
+
+
+
+#####################################
+### Byte-compiled/compiled/optimized/DLL/executable files
+__pycache__/
+*.py[cod]
+#*$py.class
+
+*.class
+bin/
+*.exe
+*.jar
+
+#####################################
+### Distribution/packaging
+# Python
+.Python
+env/
+build/
+_build
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg
+*.egg-info/
+lib/
+lib64/
+sdist/
+var/
+wheels/
+.installed.cfg
+
+
+# Additional Package Files
+# comment out *.jar if using script engines or other plug-in packages?
+# .jar also under executables
+*.jar
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.war
+*.ear
+
+# Other VCS files
+.hg
+.svn
+
+#####################################
+### Environment Files
+# virtualenv/dotenv/pyenv
+.python-version
+.venv
+venv/
+ENV/
+.env
+env/
+
+#####################################
+### Temporary/Backup Files
+*.tmp*
+tmp/
+~*
+*.bak
+*.orig
+.cache
+
+#####################################
+### Unit test/coverage reports
+# I don't have broad experience with frameworks
+# Copied from source of others' larger projects
+htmlcov/
+.tox/
+.coverage
+*.cover
+coverage.xml
+nosetests.xml
+nosetests_scrubbed.xml
+.noseids
+.hypothesis*
+pylintoutput
+*.errs
+
+#####################################
+### IDEs/Shells/Syntax Editor files
+.ipynb_checkpoints
+.spyderproject
+.spyproject
+# PyCharm
+.idea*
+
+### See Additional Eclipse & pydev files below!!
+
+#####################################
+### Documentation
+docs/_build/
+
+#####################################
+### More Build Files
+# PyInstaller
+*.manifest
+*.spec
+
+#####################################
+### Other Tools
+# mypy
+.mypy_cache/
+
+#####################################
+### Logs
+pip-log.txt
+*.log
+*.log.*
+# JVM crash logs
+hs_err_pid*
+
+
+#####################################
+### Eclipse Files
+# Main
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.recommenders/
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# Java annotation processor (APT)
+.factorypath
+
+# TeXlipse plugin
+.texlipse
