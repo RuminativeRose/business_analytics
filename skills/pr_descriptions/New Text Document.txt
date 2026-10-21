@@ -1,0 +1,24 @@
+---
+name: pr-descriptions
+description: Use when writing or drafting a pull request description.
+Governs the structure and voice of PR text.
+---
+
+# PR descriptions
+Structure (in this order, omit empty sections):
+1. **What** — 1 to 3 bullets on what changed.
+2. **Why** — link to the issue, one sentence on the motivation.
+3. **How to test** — concrete steps a reviewer can run locally.
+4. **Risks** — anything the reviewer should look at extra-carefully, or "None known."
+5. **Screenshots** — only if there's a visible UI change.
+
+Rules:
+- Use only what's in the diff and the linked issue. Do not invent context.
+- Reviewer should be able to read the entire description in 60 seconds.
+- Link the issue number. Don't paraphrase the issue title — link it.
+
+Avoid:
+- Marketing language.
+- Self-praise ("nice clean refactor").
+- Apologies ("sorry this is messy" — if it's messy, clean it up).
+- Emojis, badges, or shields.
