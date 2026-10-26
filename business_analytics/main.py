@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 '''
+A basic business analytics software demonstrating the use of AI in programming techniques.
 '''
 
 from openai import OpenAI
-import anthropic
+# import anthropic # Not yet implemented
 
 from pydantic import BaseModel, Field
 from typing import List
+
+from langsmith import Client, traceable, tracing_context
+from langsmith.wrappers import wrap_openai
 
 import sys, os
 import logging
