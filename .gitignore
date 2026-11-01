@@ -35,6 +35,7 @@ sdist/
 var/
 wheels/
 .installed.cfg
+uv.lock
 
 
 # Additional Package Files
