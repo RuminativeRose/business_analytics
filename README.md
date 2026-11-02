@@ -3,10 +3,14 @@ A Demonstrative Toy LLM-Assisted Business Analytics/Finance Tool
 
 ## Description
 
-#TODO
+This toy program demonstrates some of the concepts taught in fall 2026 Springboard "AI for Programmers" Bootcamp, such as structured output, 
+chained output/HITL, long-lived context with skills files, and support for traceability and observability. It uses calls to ChatGPT using
+OpenAI's API to answer questions about the stock market and similar financial entities, with the system instructed specifically to look at 
+social media and prediction markets to help identify trends. Relevant financial data, such as about Nasdaq entities, could be turned into
+vectorized embeddings and used in a RAG pipeline, as one extension of this program to exemplify the RAG techniques taught in one module.
 
 ## Getting Started
-Run main.py or gui.py and enter a question about the stock market, etc., such as, "Should I invest in [company name]?"
+Run main.py or gui.py and enter a question about the stock market, etc., such as, "Should I invest in [company name]?".
 
 ### Dependencies
 
@@ -16,17 +20,17 @@ Run main.py or gui.py and enter a question about the stock market, etc., such as
 
 ### Installing
 - Download the repo and run main.py or gui.py
-- I need to refine the package structure so it can be uploaded to test.pypi.org (as a personal exercise)
-- I also need to refactor the package
-- The GUI was vibe-coded and still needs to be tested (and have HITL implemented)
+- I need to refine the package structure so it can be uploaded to test.pypi.org (as a personal exercise).
+- I also need to refactor the package in general.
+- The GUI was vibe-coded and still needs to be tested (and have HITL implemented).
 
 ### Executing program
 
 - Run main.py or gui.py
-- An executable for the gui using PyExe is also in the works
+- An executable for the gui using PyExe is also in the works.
 
 ## Help
-- This program is pretty self-explanatory
+- This program is pretty self-explanatory.
 
 ## Authors
 [Rose Nestor](https://github.com/RuminativeRose)

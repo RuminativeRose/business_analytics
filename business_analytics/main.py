@@ -22,8 +22,8 @@ logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 
 # LLM Client Setup
-openai.api_key = os.environ.get("OPENAI_API_KEY")
-client = wrap_openai(openai.Client())
+OpenAI.api_key = os.environ.get("OPENAI_API_KEY")
+client = wrap_openai(OpenAI())
 
 # # Pinecone and Vector Embeddings setup
 INDEX_NAME = "business-analytics"
@@ -184,7 +184,7 @@ class Embeddings:
 
 
 # Function from chapter 5 hitl assignment
-def get_human_confirmation(self, prompt: str) -> bool:
+def get_human_confirmation(prompt: str) -> bool:
     """Get human confirmation for a suggestion."""
     while True:
         choice = input(f"{prompt} (y/n): ").lower().strip()
@@ -211,7 +211,7 @@ def ask_openai_hitl(question: str):
             "content": f"Question: {question}\n",
         },
     ]
-    chat_completion = client.chat.responses.parse(
+    chat_completion = client.responses.parse(
         model="gpt-4o-mini-2024-07-18",
         input=messages,
         text_format=Query
@@ -244,7 +244,7 @@ def main():
     with tracing_context(enabled=True, client=langsmith_client, project_name=langsmith_project):
         while True:
             ### replace
-            question = input('Enter your query about a stock, company, or financial entity.')
+            question = input('Enter your query about a stock, company, or financial entity: ')
             logger.info('User inputted question "%s"',question)
             query = ask_openai_hitl(question)
             logger.info('Pydantic model %s generated',repr(query))
@@ -258,12 +258,12 @@ def main():
             reply = ask_openai(query)
             print(reply+'\n')
             
-            ans=input("Press 'q' to quit or any other key to repeat.")
+            ans=input("Press 'q' to quit or any other key to repeat. ")
             if ans.casefold() == 'q':
                 break
             
 
 
 if __name__ == "__main__":
-    logging.config(filename="main.log",level=logging.INFO)
+    logging.basicConfig(filename="main.log",level=logging.INFO)
     sys.exit(main())
